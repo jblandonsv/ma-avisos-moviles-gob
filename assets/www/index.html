@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<title>Avisos Ciudadanos SV</title>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.zrssfeed.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src = "js/jquery.zrssfeed.min.js"></script>
+	<script type="text/javascript" src="js/enlacesRss.js"></script>
+	<script type="text/javascript" src="js/codigo.js"></script>
+	<script type="text/javascript" src="js/cordova-2.5.0.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+<div id="encabezado" data-role="header">
+	<h1>Avisos Públicos SV</h1>
+</div>
+
+<div id="feedsAvisos" data-role="content">
+	<div id="elementos" data-role="fieldcontain">
+		
+			<select id="instituciones">
+				<option value="seleccionar">-- Seleccione --</option>
+				<option value="ASAMBLEA">Asamblea Legislativa</option>
+				<optgroup label = "Ministerios y Viceministerios">
+					<option value="MAG">Ministerio de Agricultura y Ganaderia</option>
+					<option value="MINEC">Ministerio de Economía</option>
+					<option value="MINED">Ministerio de Educación</option>
+					<option value="GOBERNACION">Ministerio de Gobernación</option>
+					<option value="MH">Ministerio de Hacienda</option>
+					<option value="SEGURIDAD">Ministerio de Justicia y Seguridad</option>
+					<option value="DEFENSA">Ministerio de Defensa</option>
+					<option value="MARN">Ministerio de Medio Ambiente</option>
+					<option value="MOP">Ministerio de Obras Públicas</option>
+					<option value="RREE">Ministerio de Relaciones Exteriores</option>
+					<option value="SALUD">Ministerio de Salud</option>
+					<option value="MITUR">Ministerio de Turismo</option>
+					<option value="MINTRAB">Ministerio de Trabajo y Previsión Social</option>
+					<option value="VVD">Viceministerio de Vivienda y Desarrollo Urbano</option>
+					<option value="VMT">Viceministerio de Transporte</option>
+				</optgroup>
+				<optgroup label = "Autónomas">
+					<option value="ANSP">Academia Nacional de Seguridad Pública (ANSP)</option>
+					<option value="ANDA">Administración Nacional de Acueductos y Alcantarillados (ANDA)</option>
+					<option value="CIFCO">Centro Internacional de Ferias y Convenciones (CIFCO)</option>
+					<option value="CENTA">Centro Nacional de Tecnología Agropecuaria (CENTA)</option>
+					<option value="CNR">Centro Nacional de Registros (CNR)</option>
+					<option value="CEL">Comisión Ejecutiva Hidroeléctrica del Río Lempa (CEL)</option>
+					<option value="CEPA">Comisión Ejecutiva Portuaria Autónoma (CEPA)</option>
+					<option value="CONAMYPE">Comisión Nacional de la Micro y Pequeña Empresa (CONAMYPE)</option>
+					<option value="CNE">Consejo Nacional de Energia (CNE)</option>
+					<option value="CONJUVE">Instituto Nacional de la Juventud</option>
+					<option value="CSSP">Consejo Superior de Salud Pública (CSSP)</option>
+					<option value="DEFENSORIA">Defensoría del Consumidor</option>
+					<option value="FOVIAL">Fondo de Conservación Vial (FOVIAL)</option>
+					<option value="FOMILENIO">Fondo del Milenio El Salvador (FOMILENIO)</option>
+					<option value="FONAVIPO">Fondo Nacional de Vivienda Popular (FONAVIPO)</option>
+					<option value="FOSEP">Fondo Salvadoreño para Estudios de Preinversión (FOSEP)</option>
+					<option value="FSV">Fondo Social para la Vivienda (FSV)</option>
+					<option value="ISSS">Instituto Salvadoreño del Seguro Social (ISSS)</option>
+					<option value="RNPN">Registro Nacional de las Personas Naturales (RNPN)</option>
+				</optgroup>
+				<optgroup label = "Superintendencias">
+					<option value="BCR">Banco Central de Reserva</option>
+					<option value="BFA">Banco de Fomento Agropecuario</option>
+					<option value="BANDESAL">Banco de Desarrollo de El Salvador (BANDESAL)</option>
+					<option value="SC">Superintendencia de Competencia</option>
+					<option value="SIGET">Superintendencia General de Electricidad y Telecomunicaciones (SIGET)</option>
+					<option value="SSF">Superintendencia del Sistema Financiero</option>
+				</optgroup>
+				<optgroup label="Otras Instituciones">
+					<option value="CORSAIN">Cooperación Salvadoreña de Inversiones (CORSAIN)</option>
+					<option value="CORREOS">Dirección General de Correos</option>
+					<option value="DIGESTYC">Dirección General de Estadísticas y Censos (DIGESTYC)</option>
+					<option value="IN">Imprenta Nacional</option>
+					<option value="IPNC">Inspectoría de la Policía Nacional Civil</option>
+					<option value="LNB">Lotería Nacional de Beneficencia (LNB)</option>
+					<option value="PNC">Policía Nacional Civil (PNC)</option>
+					<option value="MIGRACION">Dirección General de Migración y Extranjería</option>
+					<option value="PROESA">PROESA</option>
+					<option value="FISDL">Fondo de Inversión Social para el Desarrollo Local  (FISDL)</option>
+					<option value="CM">Ciudad Mujer</option>
+					<option value="CCT">Consejo Nacional de Ciencia y Tecnología</option>
+					<option value="CORSATUR">Corporación Salvadoreña de Turismo</option>
+					<option value="DNM">Dirección Nacional de Medicamentos</option>
+					<option value="FOSALUD">Fondo Solidario para la Salud (FOSALUD)</option>
+					<option value="INDES">Instituto Nacional de los Deportes (INDES)</option>
+					<option value="ISDEM">Instituto Salvadoreño de Desarrollo Municipal (ISDEM)</option>
+					<option value="INSAFOCOOP">Instituto Salvadoreño de Fomento Cooperativo  (INSAFOCOOP)</option>
+					<option value="ISDEMU">Instituto Salvadoreño para el Desarrollo de la Mujer (ISDEMU)</option>
+					<option value="ISNA">Instituto Salvadoreño para el Desarrollo Integral de la Niñez y la Adolescencia (ISNA)</option>
+					<option value="ISRI">Instituto Salvadoreño de Rehabilitación Integral (ISRI)</option>
+					<option value="ISTA">Instituto Salvadoreño de Transformación Agraria (ISTA)</option>
+					<option value="ISTU">Instituto Salvadoreño de Turismo (ISTU)</option>
+					<option value="TRANSPARENCIA">Portal de transparencia del Gobierno(LAIP FEED)</option>
+				</optgroup>
+			</select>
+		
+	</div>
+	<div id="feedSection"></div>
+</div>
+
+<div id="pie-pagina" data-role="footer">
+	<a href="mailto:blandon.jaime@gmail.com">Contáctame</a>
+	<a href="https://github.com/jblandonsv/avisos-moviles-egobsv">Repositorio GitHub</a>
+	<p>Todos los avisos en esta página son leidos desde la sección de "Avisos Ciudadanos" o "Noticias" de los sitios web del gobierno de El Salvador</p>
+</div>
+
+</div>
+
+</body>
+</html>

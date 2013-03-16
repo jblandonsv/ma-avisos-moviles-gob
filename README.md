@@ -11,12 +11,6 @@ Este es un demo desde un navegador en el cual se puede tener una idea de como se
 
 http://avisosegobsv.com.hostinghood.com/
 
-Estandarización de Sitios Web del Gobierno de El Salvador.
-==========================================================
-Este proyecto no sería posible sin el esfuerzo de la Dirección de Innovación Tecnológica e Informática de la Presidencia de El Salvador y las instituciones gubernamentales involucradas, quienes han hecho un esfuerzo enorme para estandarizar los sitios web del gobierno de El Salvador. Para mayor información pueden revisar:
-
-http://share.snacktools.com/5579BA7EFB5/fad24e6ba1548afbb8e6d11fabq238623
-
 Requisitos de Instalación:
 ==========================
 * Instalar Eclipse Helios/Ganimede/Junno. http://www.eclipse.org/  O Utilizar el Bundle http://developer.android.com/sdk/index.html
@@ -34,6 +28,12 @@ Funciones Pendientes a Desarrollar (Se aceptan contribuciones :D  ):
 =========================================================================
 Opción de Búsqueda por institución de gobierno (Instituciones Pendientes).
 Opción de Búsqueda por texto
+
+Estandarización de Sitios Web del Gobierno de El Salvador.
+==========================================================
+Este proyecto no sería posible sin el esfuerzo de la Dirección de Innovación Tecnológica e Informática de la Presidencia de El Salvador y las instituciones gubernamentales involucradas, quienes han hecho un esfuerzo enorme para estandarizar los sitios web del gobierno de El Salvador. Para mayor información pueden revisar:
+
+http://share.snacktools.com/5579BA7EFB5/fad24e6ba1548afbb8e6d11fabq238623
 
 Sitios Web Gubernamentales:
 ============================
